@@ -16,7 +16,12 @@ class App extends ConsumerWidget {
 
     return MaterialApp.router(
       title: F.title,
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF2563EB),
+        ),
+      ),
       routerConfig: router,
       debugShowCheckedModeBanner: false,
       localizationsDelegates: [
